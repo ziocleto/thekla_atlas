@@ -1,11 +1,10 @@
-// This code is in the public domain -- Ignacio Castaño <castano@gmail.com>
+// This code is in the public domain -- Ignacio Castaï¿½o <castano@gmail.com>
 
 #include "Memory.h"
 #include "Debug.h"
 #include "Utils.h"
 
 #include <stdlib.h>
-#include <malloc.h>
 
 #define USE_EFENCE 0
 
