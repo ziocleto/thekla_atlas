@@ -1,4 +1,4 @@
-// This code is in the public domain -- Ignacio Castaño <castano@gmail.com>
+// This code is in the public domain -- Ignacio Castaï¿½o <castano@gmail.com>
 
 #include "Debug.h"
 #include "Array.inl"
@@ -1011,7 +1011,7 @@ int nvAbort(const char * exp, const char * file, int line, const char * func/*=N
 // Abnormal termination. Create mini dump and output call stack.
 void debug::terminate(int code)
 {
-#if NV_OS_WIN32 || NV_OS_DURANGO
+#if NV_OS_WIN32 && NV_CC_MSVC || NV_OS_DURANGO
     EnterCriticalSection(&s_handler_critical_section);
 
     writeMiniDump(NULL);
@@ -1127,7 +1127,7 @@ void debug::resetAssertHandler()
     s_assert_handler = NULL;
 }
 
-#if NV_OS_WIN32 || NV_OS_DURANGO
+#if NV_OS_WIN32 && NV_CC_MSVC || NV_OS_DURANGO
 #if NV_USE_SEPARATE_THREAD
 
 static void initHandlerThread()

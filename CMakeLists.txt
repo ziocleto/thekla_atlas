@@ -2,13 +2,15 @@ cmake_minimum_required(VERSION 2.8.8)
 project(thekla_atlas)
 
 set(CMAKE_CXX_STANDARD 17)
-
+if (WIN32)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -msse4.1")
+ENDIF()
 #add_definitions(-DNV_OS_DARWIN=1)
 
 include_directories(
-    src
-    src/nvcore
-    extern/tinyobj)
+		src
+		src/nvcore
+		extern/tinyobj)
 
 add_subdirectory(src/nvcore)
 add_subdirectory(src/nvimage)
