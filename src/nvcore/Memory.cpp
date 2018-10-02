@@ -4,7 +4,11 @@
 #include "Debug.h"
 #include "Utils.h"
 
+#ifdef __APPLE__
 #include <stdlib.h>
+#else
+#include <malloc.h>
+#endif
 
 #define USE_EFENCE 0
 
