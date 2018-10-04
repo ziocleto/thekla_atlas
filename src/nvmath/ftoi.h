@@ -82,7 +82,7 @@ namespace nv
 #endif
 
 
-    inline void test_ftoi();
+    void test_ftoi();
 
 
 
@@ -90,13 +90,13 @@ namespace nv
 
     // Safe versions using standard casts.
 
-    inline int iround(float f);
+    int iround(float f);
 
-    inline int iround(double f);
+    int iround(double f);
 
-    inline int ifloor(float f);
+    int ifloor(float f);
 
-    inline int iceil(float f);
+    int iceil(float f);
 
 
 
@@ -104,7 +104,7 @@ namespace nv
     // Some notes from cbloom: http://cbloomrants.blogspot.com/2011/07/07-26-11-pixel-int-to-float-options.html
 
     // Quantize a float in the [0,1] range, using exact end points or uniform bins.
-    inline float quantizeFloat(float x, uint bits, bool exactEndPoints = true);
+    float quantizeFloat(float x, uint bits, bool exactEndPoints = true);
 
 
     // This is the most common rounding mode:
@@ -127,13 +127,13 @@ namespace nv
     };*/
 
     template <int N>
-    inline uint unitFloatToFixed(float f) {
+    uint unitFloatToFixed(float f) {
         return ftoi_round(f * ((1<<N)-1));
     }
 
-    inline uint8 unitFloatToFixed8(float f);
+    uint8 unitFloatToFixed8(float f);
 
-    inline uint16 unitFloatToFixed16(float f);
+    uint16 unitFloatToFixed16(float f);
 
 
 } // nv
