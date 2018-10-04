@@ -17,7 +17,7 @@ SET(MATH_SRCS
     Solver.h Solver.cpp
 	Sparse.h Sparse.cpp
     TypeSerialization.h TypeSerialization.cpp
-    Vector.h)
+    Vector.h ftoi.cpp)
 
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR})
 

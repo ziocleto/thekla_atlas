@@ -17,14 +17,14 @@ add_subdirectory(src/nvimage)
 add_subdirectory(src/nvmath)
 add_subdirectory(src/nvmesh)
 
-add_executable(
-    thekla_atlas_test
-    src/thekla/thekla_atlas_test.cpp
-    src/thekla/thekla_atlas.cpp)
-
-target_link_libraries(
-    thekla_atlas_test
-    nvmesh)
+#add_executable(
+#    thekla_atlas_test
+#    src/thekla/thekla_atlas_test.cpp
+#    src/thekla/thekla_atlas.cpp)
+#
+#target_link_libraries(
+#    thekla_atlas_test
+#    nvmesh)
 
 set(CMAKE_DEBUG_POSTFIX d)
 
